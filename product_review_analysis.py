@@ -1,4 +1,4 @@
-#Task 1: Keyoword Highlighter
+
 
 reviews = [
     "This product is really good. I'm impressed with its quality.",
@@ -11,13 +11,13 @@ positive_words = ["good", "excellent", "great", "awesome", "fantastic", "superb"
 negative_words = ["bad", "poor", "terrible", "horrible", "awful", "disappointing", "subpar"]
 neutral_words = ['average']
 all_words = positive_words + negative_words + neutral_words
-
+#Task 1: Keyoword Highlighter
 def bold_words(reviews,words):
     for review in reviews:
         for word in words:
             if review.find(word) >= 0:
                 print(review.replace(word,word.upper()))
-
+#Task 2: Word tally
 def tally_words(reviews,positive,negative):
     for review in reviews:
         review_low = review.lower()
@@ -30,7 +30,7 @@ def tally_words(reviews,positive,negative):
             if word in review_low:
                 negative_tally += 1
         print(f'This review has {positive_tally} positive words and {negative_tally} words : {review}')
-
+#Task 3: summary
 def summary(reviews):
     for review in reviews:
         review_temp = review.split()
